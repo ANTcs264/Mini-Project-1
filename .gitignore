@@ -1,0 +1,74 @@
+﻿# Virtual Environment
+venv/
+env/
+ENV/
+myenv/
+.virtualenv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+
+# VS Code
+.vscode/
+.vs/
+*.code-workspace
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Model files (optional - train your own)
+# backend/app/ml/*.pkl
+# backend/app/ml/*.joblib
+
+# Logs
+*.log
+*.logs
+logs/
+*.err
+
+# Environment variables
+.env
+*.env
+
+# Python runtime
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Project specific
+data/database/
+*.pid
+*.sock

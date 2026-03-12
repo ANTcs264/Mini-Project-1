@@ -1,0 +1,221 @@
+{
+  "nodes": {
+    "start": {
+      "id": "start",
+      "text": "You are a traveler in the mystical land of Aethelgard. As you stand at a crossroads, you see two paths ahead. One leads through a dark forest, the other toward a peaceful village.",
+      "image": "crossroads.jpg",
+      "choices": [
+        {
+          "id": "choice_1",
+          "text": "Enter the dark forest - it might hold adventure and danger",
+          "action_type": "risky",
+          "next_node": "forest_encounter",
+          "tags": ["aggressive", "stealthy"]
+        },
+        {
+          "id": "choice_2",
+          "text": "Visit the peaceful village - better to be safe",
+          "action_type": "cautious",
+          "next_node": "village_encounter",
+          "tags": ["diplomatic", "balanced"]
+        }
+      ]
+    },
+    "forest_encounter": {
+      "id": "forest_encounter",
+      "text": "In the dark forest, you hear growling. A pack of wolves surrounds you!",
+      "image": "wolves.jpg",
+      "choices": [
+        {
+          "id": "choice_1",
+          "text": "Draw your sword and fight!",
+          "action_type": "fight",
+          "next_node": "forest_fight",
+          "tags": ["aggressive"]
+        },
+        {
+          "id": "choice_2",
+          "text": "Try to sneak past them quietly",
+          "action_type": "stealth",
+          "next_node": "forest_sneak",
+          "tags": ["stealthy"]
+        },
+        {
+          "id": "choice_3",
+          "text": "Attempt to calm them with soothing words",
+          "action_type": "diplomatic",
+          "next_node": "forest_calm",
+          "tags": ["diplomatic"]
+        }
+      ]
+    },
+    "village_encounter": {
+      "id": "village_encounter",
+      "text": "The village is having a festival! The villagers welcome you warmly. However, you notice some guards looking suspicious.",
+      "image": "village_festival.jpg",
+      "choices": [
+        {
+          "id": "choice_1",
+          "text": "Join the festival and make friends",
+          "action_type": "diplomatic",
+          "next_node": "village_friends",
+          "tags": ["diplomatic", "balanced"]
+        },
+        {
+          "id": "choice_2",
+          "text": "Investigate the suspicious guards",
+          "action_type": "stealth",
+          "next_node": "village_investigate",
+          "tags": ["stealthy"]
+        },
+        {
+          "id": "choice_3",
+          "text": "Challenge the guards to a fight",
+          "action_type": "fight",
+          "next_node": "village_fight",
+          "tags": ["aggressive"]
+        }
+      ]
+    },
+    "forest_fight": {
+      "id": "forest_fight",
+      "text": "You bravely fight the wolves! After a tough battle, you emerge victorious. The wolves retreat, but you're wounded.",
+      "image": "victory.jpg",
+      "choices": [
+        {
+          "id": "choice_1",
+          "text": "Continue deeper into the forest",
+          "action_type": "risky",
+          "next_node": "end",
+          "tags": ["aggressive", "stealthy"]
+        },
+        {
+          "id": "choice_2",
+          "text": "Return to the village to heal",
+          "action_type": "cautious",
+          "next_node": "end",
+          "tags": ["diplomatic", "balanced"]
+        }
+      ]
+    },
+    "forest_sneak": {
+      "id": "forest_sneak",
+      "text": "You move silently through the shadows. The wolves don't notice you. You find a hidden treasure chest!",
+      "image": "treasure.jpg",
+      "choices": [
+        {
+          "id": "choice_1",
+          "text": "Open the chest carefully",
+          "action_type": "cautious",
+          "next_node": "end",
+          "tags": ["stealthy", "balanced"]
+        },
+        {
+          "id": "choice_2",
+          "text": "Smash it open quickly",
+          "action_type": "risky",
+          "next_node": "end",
+          "tags": ["aggressive"]
+        }
+      ]
+    },
+    "forest_calm": {
+      "id": "forest_calm",
+      "text": "You speak softly to the wolves. To your surprise, they understand! They lead you to their pack leader who offers you a magical gift.",
+      "image": "magical_gift.jpg",
+      "choices": [
+        {
+          "id": "choice_1",
+          "text": "Accept the gift gratefully",
+          "action_type": "diplomatic",
+          "next_node": "end",
+          "tags": ["diplomatic", "balanced"]
+        },
+        {
+          "id": "choice_2",
+          "text": "Decline and ask for their friendship instead",
+          "action_type": "diplomatic",
+          "next_node": "end",
+          "tags": ["diplomatic"]
+        }
+      ]
+    },
+    "village_friends": {
+      "id": "village_friends",
+      "text": "You make many friends at the festival. The villagers share their food and stories with you. You learn that the guards are actually protectors in disguise!",
+      "image": "friends.jpg",
+      "choices": [
+        {
+          "id": "choice_1",
+          "text": "Offer to help the guards protect the village",
+          "action_type": "diplomatic",
+          "next_node": "end",
+          "tags": ["diplomatic"]
+        },
+        {
+          "id": "choice_2",
+          "text": "Ask to join their guard training",
+          "action_type": "fight",
+          "next_node": "end",
+          "tags": ["aggressive"]
+        }
+      ]
+    },
+    "village_investigate": {
+      "id": "village_investigate",
+      "text": "You follow the suspicious guards and discover they're actually thieves planning to rob the village!",
+      "image": "thieves.jpg",
+      "choices": [
+        {
+          "id": "choice_1",
+          "text": "Alert the villagers quietly",
+          "action_type": "stealth",
+          "next_node": "end",
+          "tags": ["stealthy", "diplomatic"]
+        },
+        {
+          "id": "choice_2",
+          "text": "Confront the thieves directly",
+          "action_type": "fight",
+          "next_node": "end",
+          "tags": ["aggressive"]
+        }
+      ]
+    },
+    "village_fight": {
+      "id": "village_fight",
+      "text": "You challenge the guards, but they're actually skilled protectors. They defeat you, but impressed by your bravery, they offer to train you.",
+      "image": "training.jpg",
+      "choices": [
+        {
+          "id": "choice_1",
+          "text": "Accept their training offer",
+          "action_type": "fight",
+          "next_node": "end",
+          "tags": ["aggressive"]
+        },
+        {
+          "id": "choice_2",
+          "text": "Politely decline and leave",
+          "action_type": "cautious",
+          "next_node": "end",
+          "tags": ["diplomatic", "balanced"]
+        }
+      ]
+    },
+    "end": {
+      "id": "end",
+      "text": "Your journey continues... This chapter of your story ends here. The choices you made will shape your future adventures!",
+      "image": "sunset.jpg",
+      "choices": [
+        {
+          "id": "choice_1",
+          "text": "Start a new adventure",
+          "action_type": "restart",
+          "next_node": "start",
+          "tags": ["all"]
+        }
+      ]
+    }
+  }
+}
