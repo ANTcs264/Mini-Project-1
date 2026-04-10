@@ -1,6 +1,8 @@
+// Use relative path on Vercel, localhost for development
 const API_BASE_URL = window.location.hostname === 'localhost'
     ? 'http://localhost:5000/api/game'
     : '/api/game';
+
 const api = {
     async startNewGame() {
         const response = await fetch(`${API_BASE_URL}/start`, {
@@ -14,10 +16,10 @@ const api = {
         const response = await fetch(`${API_BASE_URL}/choice`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ 
-                session_id: sessionId, 
-                choice_id: choiceId, 
-                current_node_id: currentNodeId 
+            body: JSON.stringify({
+                session_id: sessionId,
+                choice_id: choiceId,
+                current_node_id: currentNodeId
             })
         });
         return response.json();
