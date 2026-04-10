@@ -1,5 +1,6 @@
-const API_BASE_URL = 'http://localhost:5000/api/game';
-
+const API_BASE_URL = window.location.hostname === 'localhost'
+    ? 'http://localhost:5000/api/game'
+    : '/api/game';
 const api = {
     async startNewGame() {
         const response = await fetch(`${API_BASE_URL}/start`, {
