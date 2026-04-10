@@ -1,13 +1,14 @@
 import sys
 import os
 
-# Add the backend folder to Python path
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'backend'))
+# Add the backend folder to Python's module search path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'backend'))
 
+# Now import the Flask app factory
 from app import create_app
 
 app = create_app()
 
-# For local testing (optional)
+# Optional: for local testing with `python api/index.py`
 if __name__ == '__main__':
     app.run()
